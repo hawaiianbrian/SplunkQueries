@@ -1,0 +1,8 @@
+#  VPN Connections Firewall
+```yaml
+
+index=Firewall (log_action="tunnel-down" tunneltype="ssl-web") OR 
+(msg="SSL tunnel established" reason="tunnel established") AND (user=*)
+|  table _time user remip tunnelip tunnelid msg reason 
+|  sort - tunnelid 
+|  stats count by msg

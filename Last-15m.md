@@ -1,7 +1,4 @@
-# SimpleHelp Remote Support Software Path Traversal & Related Vulnerabilities  
----
-
-## Check Last 15min of a target
+#  Check Last 15min of a target
 ```yaml
 
 ./splunk search 'host="Hostname" earliest_time=-15m@s -maxout 0

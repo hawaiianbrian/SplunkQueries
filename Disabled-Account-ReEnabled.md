@@ -1,7 +1,7 @@
 #  Disabled Account Re-enabled
 ```yaml
 
-index="your index name here" sourcetype=WinEventLog:Security (EventCode=4722) 
+index=INDEX sourcetype=WinEventLog:Security (EventCode=4722) 
 | eval Date=strftime(_time, "%Y/%m/%d") 
 |rex "ID:\s+\w+\\\(?<sourceaccount>\S+)\s+" 
 | rex "Account:\s+Security\sID:\s+\w+\\\(?<targetaccount>\S+)\s+" 

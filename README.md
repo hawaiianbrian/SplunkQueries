@@ -1,5 +1,4 @@
 # SplunkQueries
-# SplunkQueries
 
 A collection of Splunk searches and detection use cases for security monitoring, threat hunting, and SOC dashboard development.
 
